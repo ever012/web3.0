@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link href="index.css" rel="stylesheet" type="text/css" />
+    <title>Ventajas de la Web 3.0</title>
+</head>
+<body>
+    <header>
+        <div id="particles-js"></div>
+        <h1>Descubre la Web 3.0</h1>
+        <p>El futuro de la internet está aquí</p>
+    </header>
+    <div class="container">
+        <section class="benefits">
+            <div class="benefit-card">
+                <h3>Descentralización</h3>
+                <p>Mayor control y privacidad para los usuarios, sin intermediarios centralizados.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Inteligencia Artificial</h3>
+                <p>Experiencias más personalizadas y eficientes gracias al aprendizaje automático.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Interoperabilidad</h3>
+                <p>Aplicaciones y servicios que funcionan perfectamente en diferentes plataformas.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Seguridad Mejorada</h3>
+                <p>Tecnologías blockchain que ofrecen mayor seguridad y transparencia.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Web Semántica</h3>
+                <p>Mejor comprensión del contexto y significado de la información por parte de las máquinas.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Realidad Virtual y Aumentada</h3>
+                <p>Experiencias inmersivas que difuminan las líneas entre lo digital y lo físico.</p>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        document.querySelectorAll('.benefit-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    card.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
